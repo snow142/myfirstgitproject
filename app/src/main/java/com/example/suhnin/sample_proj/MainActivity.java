@@ -81,6 +81,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+            FrameFragment frameFragment = new FrameFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,frameFragment)
+                    .addToBackStack(null)
+                    .commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
